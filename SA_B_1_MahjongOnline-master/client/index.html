@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Mahjong Online</title>
+
+<link rel="stylesheet" type="text/css" href="lobby.css">
+
+<script src="basic.js"></script>
+<script src="login.js"></script>
+<script src="client.js"></script>
+<script src="phaser.min.js"></script>
+<script src="playState.js"></script>
+<script src="optionState.js"></script>
+<script src="game.js"></script>
+</head>
+
+<body>
+<div id="mahjong-online-login">
+	<form name="login" method="post">
+		<u1>
+			<li>Username: <input class="username" type="text" name="username"></li>
+			<li>Password: <input class="password" type="text" name="password"></li>
+		</u1>
+		<input class="submit" type="button" name="submit" value="login" onclick="loginToServer()">
+	</form>
+	<hr>
+	<form name="signup" method="post">	
+		<u1>
+			<li>Username: <input class="username" type="text" name="username"></li>
+			<li>Password: <input class="password" type="text" name="password"></li>
+		</u1>
+		<input class="submit" type="button" name="signup" value="signup" onclick="signupToServer()">
+	</form>
+</div> <!-- end mahjong-online-login -->
+
+<div id="mahjong-online-lobby" hidden="">
+	<form name="newRoom" method="post">	
+		<input type="text" name="newRoomName">
+		<input class="submit" type="button" name="signup" value="Create room" onclick="makeRoom_cb()">
+	</form>
+	Rooms:<br>
+	<div id="room-list" class="room-list">
+	</div>
+    <nav>
+    Online Users:<br>
+    <ul id="user-list">
+    </ul>
+	</nav>
+</div> <!-- end mahjong-online-lobby-->
+
+<div id="mahjong-online-game" hidden=""></div>
+</body>
+</html>

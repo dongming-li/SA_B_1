@@ -1,0 +1,50 @@
+{
+  "name": "mahjong-online-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dist/game_server/ & node dist/login_server/",
+    "start-login-server": "node dist/login_server/",
+    "start-game-server": "node dist/game_server/",
+    "build": "tsc",
+    "watch-tsc": "tsc --watch",
+    "watch-start": "nodemon dist/game_server/ & nodemon dist/login_server/",
+    "watch-start-login-server": "nodemon dist/login_server/",
+    "watch-start-game-server": "nodemon dist/game_server/",
+    "start-deamon": "forever start dist/login_server/index.js & forever start dist/game_server/index.js",
+    "list-deamon": "forever list",
+    "stop-deamon": "kill",
+    "test": "tsc && mocha dist/**/*.spec.js",
+    "lint": "eslint src --ext ts",
+    "tsc": "node_modules/.bin/tsc",
+    "nodemon": "node_modules/.bin/nodemon",
+    "mocha": "node_modules/.bin/mocha",
+    "eslint": "node_modules/.bin/eslint",
+    "forever": "node_modules/.bin/forever"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^8.0.28",
+    "@types/ws": "^3.0.2",
+    "express": "^4.15.4",
+    "mongodb": "^2.2.31",
+    "mysql": "^2.14.1",
+    "q": "^1.5.0",
+    "ws": "^3.1.0",
+    "forever": "^0.15.3"
+  },
+  "devDependencies": {
+    "@types/mocha": "^2.2.43",
+    "@types/node": "^8.0.28",
+    "chai": "^4.1.2",
+    "eslint": "^4.6.1",
+    "eslint-config-airbnb-base": "^12.0.0",
+    "eslint-plugin-import": "^2.7.0",
+    "mocha": "^3.5.2",
+    "nodemon": "^1.12.0",
+    "typescript": "^2.5.2",
+    "typescript-eslint-parser": "^8.0.0"
+  }
+}

@@ -1,0 +1,1 @@
+{"version":3,"file":"message.model.js","sourceRoot":"","sources":["../../../src/login_server/model/message.model.ts"],"names":[],"mappings":"AAAA,YAAY,CAAC;;AAIb;IAKI,YAAY,OAAe;QACzB,IAAI,IAAI,GAAG,IAAI,CAAC,KAAK,CAAC,OAAO,CAAC,CAAC;QAC/B,IAAI,CAAC,MAAM,GAAG,IAAI,CAAC,MAAM,CAAC;IAC5B,CAAC;CACJ;AATD,0BASC"}
